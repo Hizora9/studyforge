@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parking Fury 2</title>
+
+        <script>
+            if (!localStorage.getItem("loggedIn")) {
+            window.location.href = "login.html";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Parking Fury 2</h1>
+
+        <iframe src="games/parkingfury2/index.html" 
+        width="640" 
+        height="480" 
+        style="border:2px solid #333; border-radius:8px;" 
+        allowfullscreen>
+        </iframe>
+    </body>
+</html>

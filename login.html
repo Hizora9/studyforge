@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Tools Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-center">
+  <form id="loginForm" class="login-form">
+    <h4 class="center">Please Login</h4>
+
+    <input class="input" type="text" id="username" placeholder="Username"><br>
+    <input class="input" type="password" id="password" placeholder="Password"><br>
+
+    <button type="button" class="input-btn" onclick="checkLogin()">Login</button>
+
+    <p id="error"></p>
+  </form>
+</div>
+
+
+
+<script>
+  const users = {
+    "admin": "admin",
+    "jasonnguyen": "furrylover123",
+    "justinpham": "siscogae"
+  };
+
+  function checkLogin() {
+    const u = document.getElementById('username').value.trim();
+    const p = document.getElementById('password').value;
+
+    if (users[u] && users[u] === p) {
+      localStorage.setItem("loggedIn", "true");
+      window.location.href = "index.html";
+    } else {
+      document.getElementById('error').textContent = "Invalid username or password";
+    }
+  }
+</script>
+
+</body>
+</html>
